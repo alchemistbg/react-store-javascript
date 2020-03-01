@@ -1,0 +1,74 @@
+@import url('https://use.fontawesome.com/releases/v5.11.2/css/all.css');
+// @import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&display=swap&subset=latin-ext');
+
+
+html {
+    font: var(--font-size-body-normal)/1.5 var(--font-family-body), sans-serif;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: var(--font-size-body-large);
+    }
+}
+
+@media (min-width: 1280px) {
+    html {
+        font-size: var(--font-size-body-Large);
+    }
+}
+
+@media (min-width: 1600px) {
+    html {
+        font-size: var(--font-size-body-LARGE);
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-family-headers);
+    font-weight: 500;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.8em;
+}
+
+h2 {
+    font-size: 2.4em;
+}
+
+h3 {
+    font-size: 2.0em;
+}
+
+h4 {
+    font-size: 1.7em;
+}
+
+h5 {
+    font-size: 1.4em;
+}
+
+h6 {
+    font-size: 1.2em;
+}
+
+a {
+    text-decoration: none;
+
+    @at-root {
+        .site-header a {
+            color: var(--color-navigation-text);
+        }
+    }
+
+}

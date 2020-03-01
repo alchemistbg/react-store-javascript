@@ -1,0 +1,48 @@
+:root {
+    // Width styles
+    --width-main-content: 60vw;
+
+    @media (max-width: 1280px) {
+        --width-main-content: 75vw;
+    }
+
+    @media (max-width: 768px) {
+        --width-main-content: 90vw;
+    }
+
+    // Font styles
+    // --font-family-headers: 'Open Sans';
+    // --font-family-headers: 'Comfortaa';
+    --font-family-headers: 'Ubuntu';
+    --font-family-body: 'Open Sans';
+    --font-size-body-normal: 12px;
+    --font-size-body-large: 14px;
+    --font-size-body-Large: 16px;
+    --font-size-body-LARGE: 18px;
+
+    // Color styles
+
+    // Header & Footer
+    --color-text-navigation: #ffffff;
+    --color-text-highlight: #852000;
+    --color-navigation-background: #0f4c81;
+    // Main
+    --color-text-main: #0f4c81;
+    --color-text-medium: rgb(15, 76, 129, 0.5);
+    --color-text-reverse: #ffffff;
+    --color-background-main: #ffffff;
+    --color-background-warning: #852000;
+    // --color-background-warning-light: rgb(133, 31, 0, 0.5);
+    //Buttons
+    --color-button-disabled: rgba(15, 76, 129, 0.5);
+    //Borders
+    --color-border-main: #0f4c81;
+    //Box-Shadow
+    --color-shadow-light: rgba(15, 76, 129, 0.25);
+    --shape-shadow-main: 0px 0px 5px 2px;
+    //Outlines
+    --color-outline-main: #0f4c81;
+    --color-outline-alternative: #852000;
+    //Transition
+    --transition-time-main: 0.2s;
+}

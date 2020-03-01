@@ -1,0 +1,42 @@
+@import './mixins.scss';
+
+.form-button {
+    display: block;
+    padding: 0.6em;
+    outline: none;
+    border: 2px solid var(--color-border-main);
+    color: var(--color-text-main);
+    background-color: var(--color-background-main);
+    font-size: 1em;
+    font-weight: bold;
+    transition: color var(--transition-time-main),
+        background-color var(--transition-time-main);
+
+    &:hover {
+        color: var(--color-background-main);
+        background-color: var(--color-text-main);
+        cursor: pointer;
+    }
+
+    &.product-table {
+        font-size: 1.5em;
+        padding: 0;
+
+        border: none;
+        background: none;
+
+        transition: color var(--transition-time-main);
+
+        &:hover {
+            color: var(--color-text-highlight);
+        }
+
+        &:disabled {
+            color: var(--color-button-disabled);
+        }
+
+        &:disabled:hover {
+            cursor: default;
+        }
+    }
+}
