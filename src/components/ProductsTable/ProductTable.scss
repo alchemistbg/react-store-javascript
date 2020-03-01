@@ -1,0 +1,117 @@
+@import '../../scss/mixins.scss';
+
+.product-list-table {
+    list-style: none;
+    padding: 0;
+    padding-bottom: 2em;
+
+    .cart-image img {
+        width: 6em;
+    }
+
+    .product-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 1em;
+        padding-bottom: 1em;
+        border-bottom: 2px solid var(--color-outline-alternative);
+
+        &.header {
+            font-weight: bold;
+            color: var(--color-navigation-text);
+            background: var(--color-donut-border-dark);
+        }
+
+        button {
+            display: inline;
+        }
+    }
+
+    .product-item-title {
+        text-align: left;
+        width: 50%;
+
+        a {
+            display: flex;
+            align-items: center;
+            color: var(--color-text-main);
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: var(--color-text-highlight);
+        }
+
+        .title-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .button-delete {
+            font-size: 0.8em;
+            padding-left: 6rem;
+
+            i {
+                margin-right: 0.5em;
+            }
+        }
+    }
+
+    .product-item-sprice,
+    .product-item-qty,
+    .product-item-tprice {
+        width: 14%;
+    }
+
+    @include bp(desktops) {
+
+        .product-item-title {
+            width: 40%;
+        }
+
+        .product-item-sprice,
+        .product-item-qty,
+        .product-item-tprice {
+            width: 18%;
+            padding-top: 1em;
+        }
+    }
+
+    @include bp(tablets) {
+        .product-item.header {
+            display: none;
+        }
+
+        .product-item-title {
+            width: 100%;
+        }
+
+        .product-item-sprice,
+        .product-item-qty,
+        .product-item-tprice {
+            width: 30%;
+            padding-top: 1em;
+        }
+    }
+
+    .product-item-qty {
+        button {
+            margin: 0.5em;
+        }
+
+        span {
+            display: inline-block;
+            width: 1em;
+            user-select: none;
+        }
+
+        .qty-number {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    }
+
+}
