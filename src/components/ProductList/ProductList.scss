@@ -1,0 +1,27 @@
+@import '../../scss/mixins.scss';
+
+.product-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    // @include bp (tablets) {
+    // display: block;
+    // }
+
+    &::after {
+        content: "";
+        width: 32%;
+
+        @include bp (tablets) {
+            // display: none;
+        }
+    }
+
+    .list-title {
+        width: 100%;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+        // text-align: center;
+    }
+}
