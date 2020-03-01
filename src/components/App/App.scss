@@ -1,0 +1,33 @@
+body {
+
+    .site-container {
+        min-height: 100vh;
+
+        header,
+        footer {
+            color: var(--color-text-navigation);
+            background-color: var(--color-navigation-background);
+        }
+
+        main {
+            min-height: calc(100vh - 14em);
+            color: var(--color-text-main);
+            // background-color: var(--color-main-background);
+        }
+
+        .site-header,
+        .site-footer,
+        .site-main {
+            max-width: var(--width-main-content);
+            margin: 0 auto;
+        }
+
+        .site-header {
+            margin-bottom: 2em;
+        }
+
+        .site-footer {
+            margin-top: 0.5em;
+        }
+    }
+}
