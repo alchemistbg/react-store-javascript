@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import ProductTableHeader from './ProductTableHeader';
 
-import Quantity from '../common/Quantity/Quantity';
+import Quantity from './../common/Quantity/Quantity';
 import Image from './../common/Image/Image';
 import Button from './../common/Button/Button';
 

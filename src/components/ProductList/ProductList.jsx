@@ -5,7 +5,11 @@ import React from 'react'
 import ProductCard from './../ProductCard/ProductCard';
 
 function ProductList(props) {
+
+    document.title = "Compass Store";
+
     const { products } = props;
+
     return <div className="product-list">
         <h1 className="list-title">Our Products</h1>
         {
