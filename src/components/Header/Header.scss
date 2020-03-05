@@ -27,11 +27,12 @@
 
             display: flex;
 
-            .nav-item {
-                line-height: 6em;
-                margin: 0;
-                padding: 0;
-            }
+        }
+
+        .nav-item {
+            line-height: 6em;
+            margin: 0;
+            padding: 0;
         }
 
         .fas {
@@ -42,16 +43,17 @@
             position: relative;
             font-size: 2em;
 
-            .cart-size {
-                position: absolute;
-                padding: 0.2em 0.5em;
-                border-radius: 50%;
-                background: var(--color-text-highlight);
-                font-size: 0.5em;
-                font-family: var(--font-family-headers);
-                top: -0.5em;
-                right: -0.5em;
-            }
+        }
+
+        .cart-size {
+            position: absolute;
+            padding: 0.2em 0.5em;
+            border-radius: 50%;
+            background: var(--color-text-highlight);
+            font-size: 0.5em;
+            font-family: var(--font-family-headers);
+            top: -0.5em;
+            right: -0.5em;
         }
     }
 }

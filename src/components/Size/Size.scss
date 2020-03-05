@@ -11,16 +11,13 @@
 
     .label-list {
         display: flex;
-        // flex-wrap: wrap;
         width: 100%;
     }
 
     .size-label {
-        // min-width: 15%;
-        // line-height: 4em;
         flex-basis: 10%;
         padding: 1em;
-        margin-right: 1%;
+        margin-right: 2%;
         margin-bottom: 5%;
         outline: 2px solid var(--color-outline-main);
         text-align: center;
@@ -50,7 +47,6 @@
     }
 
     #size-warning {
-        // flex-basis: 100%;
         visibility: hidden;
         padding: 0.5em 1em;
         user-select: none;
