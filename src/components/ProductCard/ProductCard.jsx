@@ -1,7 +1,7 @@
 import './ProductCard.scss';
 
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 import Image from './../common/Image/Image';
 
@@ -9,7 +9,7 @@ function ProductCard(props) {
     const { product } = props;
 
     return (
-        <Link className="product-card" to={`products/${product.id}`}>
+        <Link className="product-card" to={`/products/${product.id}`}>
             <span className="card-inner">
                 <div className="details">Details</div>
                 <Image image={product.images[0]} imageClass="card-media" />

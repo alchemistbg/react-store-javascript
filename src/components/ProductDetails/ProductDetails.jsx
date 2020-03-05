@@ -8,16 +8,20 @@ import ImageThumbs from './../ImageThumbs/ImageThumbs';
 import Size from './../Size/Size';
 import Button from './../common/Button/Button';
 
-import Quantity from '../common/Quantity/Quantity';
-import CartContext from '../../context/CartContext';
+import Quantity from './../common/Quantity/Quantity';
+import CartContext from './../../context/CartContext';
 
-import { showToast } from '../../utils/helpers';
+import { showToast } from './../../utils/helpers';
 
 function ProductDetails(props) {
+
     const { id } = props.match.params;
+
     const product = db.products.filter((prod) => {
         return prod.id === +id;
     })[0];
+
+    document.title = `${product.manufacturer} | ${product.name}`;
 
     let [productQty, setProductQty] = useState(1);
 
