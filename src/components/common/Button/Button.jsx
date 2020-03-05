@@ -4,7 +4,7 @@ import React from 'react';
 
 function Button(props) {
     const { isDisabled, className, onClick: onClickFunction, btnText, icon } = props;
-    // console.log(isDisabled)
+
     return (
         <button
             type="button"
