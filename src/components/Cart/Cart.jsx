@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom';
 
 import CartContext from './../../context/CartContext';
 
-import ProductsTable from '../ProductsTable/ProductTable';
+import ProductsTable from './../ProductsTable/ProductTable';
 import { calcCartTotalSum } from './../../utils/helpers';
 import Button from './../common/Button/Button';
 
 const Cart = () => {
+    document.title = "Compass Store | Cart";
 
     const [{ cart }, dispatch] = useContext(CartContext);
 
@@ -67,7 +68,6 @@ const Cart = () => {
                                 <span className="price">{calcCartTotalSum(cart).toFixed(2)}</span>
                             </h4>
                             <Button isDisabled={false} className="form-button cart" onClick={handleCheckout} btnText={"Proceed to Checkout"} />
-                            {/* <input className="form-button" type="button" value="Proceed to Checkout" onClick={handleCheckout} /> */}
                         </div>
                     </Fragment>
                 ) : (
