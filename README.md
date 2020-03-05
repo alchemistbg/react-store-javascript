@@ -26,42 +26,49 @@ Its main characteristics are as follows:<br />
 ## Run/Build
 
 #### Requirements
+* Git<br />
 * Node.js<br />
 * NPM<br />
 
 
 #### 1\. Download the project source code:
+In order to download the application source code from the repository using the HTTPS-based connection with **github** <br/> 
+open your favorite console application, navigate to folder of your choice and run:
 ```bash
 git clone https://github.com/alchemistbg/react-store.git
 ```
-for using the HTTPS-based connection with **github**.
+You could download the source code using **Download ZIP** option. Place the archive in a folder of your choice and extract the files there.
 
 #### 2\. Navigate to **react-store** folder:
+Enter the application folder by run:
 ```bash
 cd react-store
 ```
 
 #### 3\. Install package dependencies:
+To install application dependencies before you start the app, run:<br />
 ```bash
 npm i
 ```
 
-#### 4\. Start the project in development mode:
+#### 4\. Starting:
+To start the application in development mode, run:<br />
 ```bash
 npm start
 ```
-This should also open new browser tab/window navigating to [http://localhost:3000](http://localhost:3000).<br />
+This should also open new browser tab/window, that will navigate you to [http://localhost:3000](http://localhost:3000).<br />
 The page will reload if you make edits. You will also see any lint errors in the console.
 
-#### 5\. Build production-ready version:
+#### 5\. Building:
+In order to view the application in production mode, first you need to create `production build` by run:
 ```bash
 npm run build
 ```
 This creates `build` folder, that contains all the necessary files.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.<br />
 <br />
-To start the production version locally, you will need server for static files.<br />
-One possible solution is [serve](https://github.com/zeit/serve). To install it (globally) run:
+To start the production version locally, you will need server for serving static files.<br />
+One possible solution is using [serve](https://github.com/zeit/serve). To install it (globally) run:
 ```bash
 npm install -g serve
 ```
