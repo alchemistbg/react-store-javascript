@@ -18,14 +18,30 @@ const Quantity = (props) => {
 
         {
             qty < 2 ? (
-                <Button isDisabled={true} className="form-button product-table" onClick={() => handleDecrement(product)} btnText={<i className="far fa-minus-square"></i>} />
+                <Button
+                    dataTestId={"decr"}
+                    isDisabled={true}
+                    className="form-button product-table"
+                    onClick={() => handleDecrement(product)}
+                    btnText={<i className="far fa-minus-square"></i>}
+                />
             ) : (
-                    <Button isDisabled={false} className="form-button product-table" onClick={() => handleDecrement(product)} btnText={<i className="far fa-minus-square"></i>} />
+                    <Button
+                        dataTestId={"decr"}
+                        isDisabled={false}
+                        className="form-button product-table"
+                        onClick={() => handleDecrement(product)}
+                        btnText={<i className="far fa-minus-square"></i>}
+                    />
                 )
         }
-
         <span className="qty-number">{qty}</span>
-        <Button isDisabled={false} className="form-button product-table" onClick={() => handleIncrement(product)} btnText={<i className="far fa-plus-square"></i>} />
+        <Button
+            dataTestId={"incr"}
+            isDisabled={false}
+            className="form-button product-table"
+            onClick={() => handleIncrement(product)}
+            btnText={<i className="far fa-plus-square"></i>} />
 
     </span>
 }

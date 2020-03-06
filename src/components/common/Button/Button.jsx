@@ -3,12 +3,12 @@ import './Button.scss';
 import React from 'react';
 
 function Button(props) {
-    const { isDisabled, className, onClick: onClickFunction, btnText, icon } = props;
+    const { dataTestId, isDisabled, className, onClick: onClickFunction, btnText, icon } = props;
 
     return (
         <button
-            type="button"
-            disabled={isDisabled || false}
+            data-testid={dataTestId}
+            disabled={isDisabled}
             className={className}
             onClick={onClickFunction}
         >
