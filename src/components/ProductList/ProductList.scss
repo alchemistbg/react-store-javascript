@@ -3,17 +3,11 @@
 .product-list-container {
     display: flex;
     flex-wrap: wrap;
-    // flex-direction: column;
     align-items: center;
 }
 
 h1 {
     width: 65%;
-    // border: 2px solid greenyellow;
-
-    // @media (max-width: 1420px) {
-    //     width: 60%;
-    // }
 
     @include bp(tabletl) {
         width: 50%;
@@ -22,10 +16,10 @@ h1 {
     @include bp(tablets) {
         width: 100%;
     }
+
 }
 
 .sort-wrapper {
-    // border: 2px solid greenyellow;
     margin-bottom: 1.25em;
     margin-left: auto;
     display: flex;
@@ -33,19 +27,12 @@ h1 {
     width: 32%;
 
     position: relative;
-    // @media (min-width: 1420px) {
-    //     width: 40%;
-    // }
 
     @include bp(tabletl) {
         width: 50%;
     }
 
     @include bp(tablets) {
-        width: 75%;
-    }
-
-    @include bp(phonel) {
         width: 100%;
     }
 
@@ -79,7 +66,6 @@ h1 {
         }
 
         option {
-            // color: purple;
             padding: 1em;
         }
     }
@@ -92,8 +78,6 @@ h1 {
         right: 0;
         top: 0;
     }
-
-
 }
 
 
@@ -101,8 +85,6 @@ h1 {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    // flex-direction: column;
-
 
     &::after {
         content: "";
