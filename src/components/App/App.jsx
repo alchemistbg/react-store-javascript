@@ -13,24 +13,29 @@ import Cart from './../Cart/Cart';
 
 import { CartProvider } from './../../context/CartContext';
 import { cartReducer, initialCartState } from './../../reducers/CartReducer';
+import { SortProvider } from './../../context/SortContext';
+import { sortReducer, initialSortState } from './../../reducers/SortReducer';
 
 function App() {
 
 	const useCartState = useReducer(cartReducer, initialCartState);
+	const useSortState = useReducer(sortReducer, initialSortState);
 
 	return (
 		<div className="site-container">
 			<Router>
 				<CartProvider value={useCartState}>
-					<Header />
-					<main className="site-main">
-						<Switch>
-							<Route exact path='/' render={() => <ProductList products={db.products} />} />
-							<Route exact path="/products/:id" component={ProductDetails} />
-							<Route exact path="/cart" component={Cart} />
-						</Switch>
-					</main>
-					<Footer />
+					<SortProvider value={useSortState}>
+						<Header />
+						<main className="site-main">
+							<Switch>
+								<Route exact path='/' render={() => <ProductList products={db.products} />} />
+								<Route exact path="/products/:id" component={ProductDetails} />
+								<Route exact path="/cart" component={Cart} />
+							</Switch>
+						</main>
+						<Footer />
+					</SortProvider>
 				</CartProvider>
 			</Router>
 		</div>
