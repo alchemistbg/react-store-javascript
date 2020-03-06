@@ -82,6 +82,7 @@ function ProductDetails(props) {
                 <span className="info-wrapper">
                     <h5>{product.name}</h5>
                     <h4>{product.price} DKK</h4>
+                    <h6>Description</h6>
                     <p>{product.description}</p>
                     <Size sizes={product.sizes} handleSizeSelection={handleSizeSelection} />
                 </span>
