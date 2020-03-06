@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import db from '../App/db.json';
+import db from './../App/db.json';
 import ProductCard from './ProductCard';
 
 describe('if ProductCards tag are loaded correctly', () => {
