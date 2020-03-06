@@ -84,10 +84,14 @@
             color: var(--color-text-reverse);
             background-color: var(--color-background-warning);
         }
+
+        h6 {
+            margin-top: 2em;
+        }
     }
 
     .qty-wrapper {
-        margin-top: 2em;
+        // margin-top: 2em;
         margin-left: auto;
         display: block;
 
@@ -96,7 +100,7 @@
         }
 
         .cart {
-            margin-top: 1em
+            margin-top: 1em;
         }
     }
 }
