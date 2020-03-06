@@ -1,8 +1,5 @@
 export const initialSortState = {
-    sort: {
-        // criteria: 'timesSold',
-        // direction: 'desc'
-    }
+    sort: {}
 };
 
 export const sortReducer = (state, action) => {

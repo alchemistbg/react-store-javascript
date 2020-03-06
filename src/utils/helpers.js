@@ -4,10 +4,7 @@ const toastOptions = {
     closeButton: true,
     newestOnTop: false,
     timeOut: 1000,
-    // extendedTimeOut: 1000,
-    progressBar: true,
-    // timeOut: 0,
-    // extendedTimeOut: 0
+    progressBar: true
 }
 
 function showToast(toastType, toastData) {
