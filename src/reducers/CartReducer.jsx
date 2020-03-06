@@ -9,15 +9,15 @@ export const cartReducer = (state, action) => {
     }
 
     const clearCart = () => {
-        localStorage.removeItem("myCart");
+        localStorage.removeItem("cartData");
     }
 
     const updateCart = (data) => {
-        localStorage.setItem("myCart", JSON.stringify(data));
+        localStorage.setItem("cartData", JSON.stringify(data));
     }
 
     switch (action.type) {
-        case 'LOAD_DATA_FROM_STORAGE':
+        case 'LOAD_CART_FROM_STORAGE':
             state.cart = JSON.parse(action.item);
             return {
                 cart: state.cart
