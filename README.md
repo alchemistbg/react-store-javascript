@@ -3,7 +3,7 @@ This is a **React**-based small e-commerce site. It was created with [Create Rea
 The application uses only functional components and hooks for managing their state.<br />
 The application uses fonts from [Google Fonts](https://fonts.google.com/) as well as [Font Awesome](https://fontawesome.com/).<br />
 The graphic art for the logo and the default image is taken from [Logo Sport Vectors by Vecteezy](https://www.vecteezy.com/free-vector/logo-sport).<br />
-It uses a dummy file that mimic the response from the backend. This file contains an object containing information for all product.<br />
+It uses a dummy file that mimic the response from the backend. This file contains an object, that holds information for all product.<br />
 <br />
 Its main characteristics are as follows:<br />
 1. CSS styles are done by using SASS. Most of the SASS code is organized into separate files which are imported in corresponding component.<br />There are several SASS files that are global and are imported at the top level.
