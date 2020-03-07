@@ -5,7 +5,15 @@ export const initialCartState = {
 export const cartReducer = (state, action) => {
     let itemIndex;
     if (action.item) {
-        itemIndex = state.cart.findIndex(item => item.id === action.item.id);
+        if (action.type === 'ADD_TO_CART') {
+            itemIndex = state.cart.findIndex((cartItem) => {
+                return (cartItem.id === action.item.id && cartItem.productSize === action.productSize);
+            });
+        } else {
+            itemIndex = state.cart.findIndex((cartItem) => {
+                return (cartItem.id === action.item.id && cartItem.productSize === action.item.productSize);
+            });
+        }
     }
 
     const clearCart = () => {
@@ -18,33 +26,32 @@ export const cartReducer = (state, action) => {
 
     switch (action.type) {
         case 'LOAD_CART_FROM_STORAGE':
-            state.cart = JSON.parse(action.item);
+            state.cart = (action.item);
             return {
                 cart: state.cart
             }
 
         case 'ADD_TO_CART':
             if (itemIndex > -1) {
-                state.cart[itemIndex].productSize = action.productSize;
                 state.cart[itemIndex].productQty += action.productQty;
                 state.cart[itemIndex].totalPrice = (state.cart[itemIndex].productQty * state.cart[itemIndex].price).toFixed(2);
                 updateCart(state.cart);
                 return {
                     cart: state.cart
                 }
-            } else {
-                action.item.productSize = action.productSize;
-                action.item.productQty = action.productQty;
-                action.item.totalPrice = (action.item.productQty * action.item.price).toFixed(2);
-                state.cart.push(action.item);
-                updateCart(state.cart);
-                return {
-                    cart: state.cart
-                }
+            }
+            const product = { ...action.item };
+            product.productSize = action.productSize;
+            product.productQty = action.productQty;
+            product.totalPrice = (product.productQty * product.price).toFixed(2);
+            state.cart.push(product);
+            updateCart(state.cart);
+            return {
+                cart: state.cart
             }
 
         case 'INCREMENT':
-            state.cart[itemIndex].productQty += 1
+            state.cart[itemIndex].productQty += 1;
             state.cart[itemIndex].totalPrice = (state.cart[itemIndex].productQty * state.cart[itemIndex].price).toFixed(2);
             updateCart(state.cart);
             return {
@@ -62,14 +69,19 @@ export const cartReducer = (state, action) => {
             }
 
         case 'REMOVE_FROM_CART':
-            if (state.cart.length === 1) {
-                clearCart();
-            } else {
-                state.cart = state.cart.filter((item) => item.id !== action.item.id);
+            state.cart = state.cart.filter((item, index) => {
+                if (index !== itemIndex) {
+                    return item;
+                }
+                return false;
+            })
+            if (state.cart.length > 0) {
                 updateCart(state.cart);
+            } else {
+                clearCart();
             }
             return {
-                cart: state.cart.filter((item) => item.id !== action.item.id)
+                cart: state.cart
             }
 
         case 'CHECKOUT':
