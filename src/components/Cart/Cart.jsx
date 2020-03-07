@@ -65,7 +65,7 @@ const Cart = () => {
                         <div className="total-price-wrapper">
                             <h4>
                                 <span className="text">Total Price: </span>
-                                <span className="price">{calcCartTotalSum(cart).toFixed(2)}</span>
+                                <span className="price">{calcCartTotalSum(cart).toFixed(2)} DKK</span>
                             </h4>
                             <Button isDisabled={false} className="form-button cart" onClick={handleCheckout} btnText={"Proceed to Checkout"} />
                         </div>
