@@ -17,14 +17,14 @@ const ProductTable = (props) => {
         <ProductTableHeader />
         {
             productTable.map((product) => {
-                return <li key={product.id.id || product.id} className="product-item data-row">
+                return <li key={product.id + product.productSize} className="product-item data-row">
                     <span className="product-item-title">
                         <Link to={"products/" + product.id}>
                             <Image image={product.images[0]} imageClass="cart-image" />
                             <div className="title-info">
-                                <span>Manufacturer: {product.manufacturer}</span>
-                                <span>{product.name}</span>
-                                <span>Size: {product.productSize}</span>
+                                <span>Manufacturer: <span className="manufacturer">{product.manufacturer}</span></span>
+                                <span className="name">{product.name}</span>
+                                <span>Size: <span className="size">{product.productSize}</span></span>
                             </div>
                         </Link>
                         <Button isDisabled={false} className="form-button button-delete product-table" onClick={() => props.handleRemoveFromCart(product)}
