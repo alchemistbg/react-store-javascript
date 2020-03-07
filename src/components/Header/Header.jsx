@@ -13,10 +13,10 @@ function Header() {
     const [{ cart }, dispatch] = useContext(CartContext);
 
     const handleOnLoad = () => {
-        if (localStorage.getItem('cartData') !== null) {
+        if (JSON.parse(localStorage.getItem('cartData')) !== null) {
             dispatch({
                 type: "LOAD_CART_FROM_STORAGE",
-                item: localStorage.getItem("cartData")
+                item: JSON.parse(localStorage.getItem('cartData'))
             });
         }
     }
