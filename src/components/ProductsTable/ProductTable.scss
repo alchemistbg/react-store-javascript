@@ -30,6 +30,12 @@
         }
     }
 
+    .product-item-sprice,
+    .product-item-qty,
+    .product-item-tprice {
+        width: 14%;
+    }
+
     .product-item-title {
         text-align: left;
         width: 50%;
@@ -48,6 +54,16 @@
         .title-info {
             display: flex;
             flex-direction: column;
+
+            .manufacturer,
+            .name,
+            .size {
+                font-weight: bold;
+            }
+
+            .name {
+                font-size: 1.2em;
+            }
         }
 
         .button-delete {
@@ -60,10 +76,9 @@
         }
     }
 
-    .product-item-sprice,
-    .product-item-qty,
     .product-item-tprice {
-        width: 14%;
+        font-weight: bold;
+        font-size: 1.2em;
     }
 
     @include bp(desktops) {
