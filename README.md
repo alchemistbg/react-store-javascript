@@ -27,11 +27,22 @@ Its main characteristics are as follows:<br />
 
 #### Requirements
 * Git<br />
-* Node.js<br />
-* NPM<br />
+* Node.js/NPM<br />
+* Create React App
 
-
-#### 1\. Download the project source code:
+#### 1\. Install requirements
+##### 1.1\. Git
+Navigate to [https://git-scm.com/download/](https://git-scm.com/download). Download and install the version for your operating system.
+##### 1.2\. Node.js\NPM
+Navigate to [https://nodejs.org/en/](https://nodejs.org/en/). Download and install the version for your operating system. 
+On windows this installation should come with both nodejs and npm. On some linux distributions it could install only nodejs so you will have to install npm separately.
+##### 1.2\. Create React App
+To install [**create-react-app**](https://create-react-app.dev/) run in terminal:
+```bash
+npm install -g create-react-app
+```
+Note: this will install [**create-react-app**](https://create-react-app.dev/) globally.
+#### 2\. Download the project source code:
 In order to download the application source code from the repository using the HTTPS-based connection with **github** <br/> 
 open your favorite console application, navigate to folder of your choice and run:
 ```bash
@@ -39,19 +50,19 @@ git clone https://github.com/alchemistbg/react-store.git
 ```
 You could download the source code using **Download ZIP** option. Place the archive in a folder of your choice and extract the files there.
 
-#### 2\. Navigate to **react-store** folder:
+#### 3\. Navigate to **react-store** folder:
 Enter the application folder by run:
 ```bash
 cd react-store
 ```
 
-#### 3\. Install package dependencies:
+#### 4\. Install package dependencies:
 To install application dependencies before you start the app, run:<br />
 ```bash
 npm i
 ```
 
-#### 4\. Starting:
+#### 5\. Starting:
 To start the application in development mode, run:<br />
 ```bash
 npm start
@@ -59,7 +70,7 @@ npm start
 This should also open new browser tab/window, that will navigate you to [http://localhost:3000](http://localhost:3000).<br />
 The page will reload if you make edits. You will also see any lint errors in the console.
 
-#### 5\. Building:
+#### 6\. Building:
 In order to view the application in production mode, first you need to create `production build` by run:
 ```bash
 npm run build
@@ -78,7 +89,7 @@ serve -s build
 ```
 The production version is accessible at [http://localhost:5000](http://localhost:5000).
 
-#### 6\. Testing:
+#### 7\. Testing:
 At the moment the application has some very basic tests aimed to check components loading.<br/>
 In order to run the test in the so called interactive watch mode run:
 ```bash
