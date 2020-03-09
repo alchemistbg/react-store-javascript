@@ -36,7 +36,7 @@ Navigate to [https://git-scm.com/download/](https://git-scm.com/download). Downl
 ##### 1.2\. Node.js\NPM
 Navigate to [https://nodejs.org/en/](https://nodejs.org/en/). Download and install the version for your operating system. 
 On windows this installation should come with both nodejs and npm. On some linux distributions it could install only nodejs so you will have to install npm separately.
-##### 1.2\. Create React App
+##### 1.3\. Create React App
 To install [**create-react-app**](https://create-react-app.dev/) run in terminal:
 ```bash
 npm install -g create-react-app
