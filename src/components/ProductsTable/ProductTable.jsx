@@ -22,7 +22,7 @@ const ProductTable = (props) => {
 						className="product-item data-row"
 					>
 						<span className="product-item-title">
-							<Link to={"/products/" + product.id}>
+							<Link to={"/react-store/products/" + product.id}>
 								<Image
 									image={product.images[0]}
 									imageClass="cart-image"
