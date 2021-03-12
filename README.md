@@ -20,6 +20,12 @@ Its main characteristics are as follows:<br />
 6. Cart state is managed by using React's Context API. On every cart change its state is updated and saved in the browser local storage.<br /> This also saves the cart state after page reloading.<br />
 <br />
 
+## TODO's
+There are several that could be done with this project:
+1. Replace html select menu with react-based one using unordered list or something similar
+2. Convert JavaScript code to TypeScript
+3. Perform some code cleaning
+
 ## Run/Build
 
 #### Requirements
