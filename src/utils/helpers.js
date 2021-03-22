@@ -7,6 +7,10 @@ const toastOptions = {
     progressBar: true
 }
 
+const miscConstants = {
+    basicUrl: "/react-store-javascript/"
+}
+
 function showToast(toastType, toastData) {
     toastr.remove();
 
@@ -34,6 +38,7 @@ function calcCartTotalSum(cart) {
 }
 
 export {
+    miscConstants,
     showToast,
     calcCartTotalSum
 }
